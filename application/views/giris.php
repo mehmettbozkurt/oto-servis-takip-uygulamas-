@@ -19,7 +19,7 @@ body{
                             <i class="material-icons">person</i>
                         </span>
                         <div class="form-line">
-                            <input type="text" class="form-control" name="kullaniciAdi" placeholder="Kullanıcı Adı" required autofocus>
+                            <input type="text" class="form-control" value="demo" name="kullaniciAdi" placeholder="Kullanıcı Adı" required autofocus>
                         </div>
                     </div>
                     <div class="input-group">
@@ -27,7 +27,7 @@ body{
                             <i class="material-icons">lock</i>
                         </span>
                         <div class="form-line">
-                            <input type="password" class="form-control" name="sifre" placeholder="Şifre" required>
+                            <input type="password" class="form-control" name="sifre" value="demo" placeholder="Şifre" required>
                         </div>
                     </div>
                     <div class="row">

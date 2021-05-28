@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Anamakine: localhost
--- Üretim Zamanı: 28 May 2021, 08:09:28
+-- Üretim Zamanı: 28 May 2021, 08:38:56
 -- Sunucu sürümü: 5.7.31
 -- PHP Sürümü: 7.2.34
 
@@ -70,7 +70,8 @@ CREATE TABLE `kullanicilar` (
 --
 
 INSERT INTO `kullanicilar` (`kullaniciId`, `kullaniciAdi`, `kullaniciSifre`, `kullaniciAd`, `kullaniciSoyad`, `kullaniciTarih`) VALUES
-(1, 'mehmet', '81dc9bdb52d04dc20036dbd8313ed055', 'Mehmet', 'Bozkurt', '2019-01-03 17:13:05');
+(1, 'mehmet', '81dc9bdb52d04dc20036dbd8313ed055', 'Mehmet', 'Bozkurt', '2019-01-03 17:13:05'),
+(3, 'demo', 'fe01ce2a7fbac8fafaed7c982a04e229', 'demo', 'demo', '2021-05-28 08:31:10');
 
 -- --------------------------------------------------------
 
@@ -199,7 +200,7 @@ ALTER TABLE `arac_bilgisi`
 -- Tablo için AUTO_INCREMENT değeri `kullanicilar`
 --
 ALTER TABLE `kullanicilar`
-  MODIFY `kullaniciId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `kullaniciId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- Tablo için AUTO_INCREMENT değeri `musteriler`
