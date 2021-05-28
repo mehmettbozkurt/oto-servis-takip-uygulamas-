@@ -1,0 +1,47 @@
+
+<IfModule mod_rewrite.c>
+RewriteEngine On
+
+#Checks to see if the user is attempting to access a valid file,
+#such as an image or css document, if this isn't true it sends the
+#request to index.php
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+#This last condition enables access to the images and css folders, and the robots.txt file
+RewriteCond $1 !^(index\.php|public|images|robots\.txt|css)
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/.+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteRule ^(.*)$ index.php/$1 [L]
+SetEnv CI_ENV development
+
+
+<IfModule mod_headers.c>
+  <FilesMatch ".(eot|otf|svg|ttf|woff|woff2)$">
+    Header set Access-Control-Allow-Origin "*"
+  </FilesMatch>
+</IfModule>
+
+<Files composer.json>
+Order allow,deny
+Deny from all
+</Files>
+<Files composer.lock>
+Order allow,deny
+Deny from all
+</Files>
+
+<Files license.txt>
+Order allow,deny
+Deny from all
+</Files>
+
+<Files readme.rst>
+Order allow,deny
+Deny from all
+</Files>
+
+<Files contributing.md>
+Order allow,deny
+Deny from all
+</Files>
+</IfModule>
